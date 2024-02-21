@@ -2,4 +2,38 @@ html {
   font-family: sans-serif;
 }
 
+
 /* Your CSS below here */
+.clickbut {
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgb(182, 1, 1, 0.2), darkred);
+  margin: 0px auto;
+  border: 1px solid darkred;
+  justify-content: center;
+  padding-top: 91px;
+  padding-bottom: 65px;
+  color: white;
+  text-align: center;
+  font-size: 1.125rem; /* a slight increase to text size so 16 is the default here. If rem is referencing the route element, its 18/16 = 1.125 */
+  text-shadow: 1px 1px 1px black;
+  
+  border-radius: 10px;
+   
+  display: block;
+
+  box-shadow: 
+    3px 3px 3px color(darkred),
+    inset 2px 2px 5px color(rgba(255, 255, 255, 0.377)),
+    inset -2px -2px 5 px color(black)
+    ;
+}
+
+.clickbut:hover {
+  background-color: rgb(139, 0, 0);
+  border-color: rgb(255, 255, 255);
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.144), rgba(255, 0, 0, 0.2), rgba(139, 0, 0, ));
+}
+

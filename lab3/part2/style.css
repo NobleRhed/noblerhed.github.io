@@ -8,7 +8,7 @@ html {
   width: 200px;
   height: 50px;
   background-color: red;
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgb(182, 1, 1, 0.2), darkred);
+  background-image: linear-gradient(to bottom right, transparent, transparent 30% rgba(105, 1, 1, 0.192), rgb(182, 1, 1, 0.2), darkred);
   margin: 0px auto;
   border: 1px solid darkred;
   justify-content: center;
@@ -18,22 +18,25 @@ html {
   text-align: center;
   font-size: 1.125rem; /* a slight increase to text size so 16 is the default here. If rem is referencing the route element, its 18/16 = 1.125 */
   text-shadow: 1px 1px 1px black;
-  
-  border-radius: 10px;
+  border-radius: 12px;
    
   display: block;
 
   box-shadow: 
-    3px 3px 3px color(darkred),
-    inset 2px 2px 5px color(rgba(255, 255, 255, 0.377)),
-    inset -2px -2px 5 px color(black)
+    0px 3px 3px color(darkred),
+    inset 0px 2px 5px color(rgba(255, 255, 255, 0.425)),
+    inset 0px -2px 5 px color(rgba(0, 0, 0, 0.521))
     ;
 }
 
+/* added a hover effect so that the button changes when you hold a cursor over it*/
 .clickbut:hover {
   background-color: rgb(139, 0, 0);
   border-color: rgb(255, 255, 255);
   cursor: pointer;
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.144), rgba(255, 0, 0, 0.2), rgba(139, 0, 0, ));
 }
-
+/* after I figured out hover, I found active here reacts when you click. Using transform + translateX and Y to make it look like its being pushed */
+.clickbut:active {
+  box-shadow: inset 0 2px 4px rgb(0, 0, 0, 0.2);
+  transform: translateY(2px) translateX(2px);
+}

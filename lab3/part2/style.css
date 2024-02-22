@@ -23,7 +23,7 @@ html {
   display: block;
 
   box-shadow: 
-    0px 3px 3px color(darkred),
+    0px 3px 3px color(rgb(139, 3, 3)),
     inset 0px 2px 5px color(rgba(255, 255, 255, 0.425)),
     inset 0px -2px 5 px color(rgba(0, 0, 0, 0.521))
     ;

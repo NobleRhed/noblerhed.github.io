@@ -137,7 +137,7 @@ p {
 }
 
 a:visited {
-  color: darken(#a66, 20%)
+  color: rgb(104, 48, 48)
 }
 
 a:hover, a:focus {

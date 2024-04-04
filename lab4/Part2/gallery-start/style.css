@@ -41,3 +41,7 @@ button {
   float: left;
   cursor: pointer;
 }
+
+.thumb-bar img:focus {
+  outline: 2px solid red ;
+}

@@ -21,18 +21,19 @@ function result() {
     const yItem = randomValueFromArray(insertY);
     const zItem = randomValueFromArray(insertZ);
 
+
   if(customName.value !== '') {
-    const name = customName.value.replace("Bob", customName.value);
-
-
+    const name = customName.value;
+    newStory = newStory.replaceAll("Bob", customName.value);
   }
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300 / 14) + ' stone';
-    const temperature =  Math.round((94 - 32) / 1.8) + ' centigrade';
-
+    const temperature =  Math.round((94 - 32) * (5 / 9)) + ' centigrade';
+    newStory = newStory.replaceAll('94 fahrenheit', temperature);
+    newStory = newStory.replaceAll('300 pounds', weight);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }

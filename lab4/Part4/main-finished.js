@@ -200,5 +200,11 @@ function loop() {
   
 }
 
+canvas.addEventListener('click', function(event) {
+  // Update the EvilCircle's position to the clicked location
+  evilBall.x = event.clientX;
+  evilBall.y = event.clientY;
+});
+
 
 loop();

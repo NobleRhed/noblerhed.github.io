@@ -117,6 +117,7 @@ class Ball extends Shape {
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
+    
   }
 
   update() {
@@ -156,12 +157,15 @@ class Ball extends Shape {
 }
 let counter = 0;
 
+
 function Scorecard() {
-  const score = document.getElementById('Scorecard');
-  score.textContent = `Balls deleted: ${counter}`;
+  const score = document.getElementById('Scorecard')
+  leftoverBalls = totalBalls - counter;
+  score.textContent = `Total balls: ${leftoverBalls}`;
 }
 
 const balls = [];
+let totalBalls = 0;
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -178,9 +182,12 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  totalBalls++;
 }
 
 const evilBall = new EvilCircle(100, 100) 
+
+
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";

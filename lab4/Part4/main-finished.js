@@ -88,11 +88,11 @@ class EvilCircle extends Shape {
           const dx = this.x - ball.x;
           const dy = this.y - ball.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          const counter = 0;
+          ;
   
           if (distance < this.size + ball.size) {
             ball.exists = false;
-            counter + 1; 
+            counter++; 
             Scorecard();
           }
         }
@@ -154,11 +154,13 @@ class Ball extends Shape {
     }
   }
 }
+let counter = 0;
 
 function Scorecard() {
-  const score = document.getElementById('score');
-  score.textContent = 'Balls killed: ${counter}';
+  const score = document.getElementById('Scorecard');
+  score.textContent = `Balls deleted: ${counter}`;
 }
+
 const balls = [];
 
 while (balls.length < 25) {

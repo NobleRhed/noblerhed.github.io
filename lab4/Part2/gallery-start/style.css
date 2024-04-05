@@ -36,12 +36,19 @@ button {
 }
 
 .thumb-bar img {
-  display: block;
+  display: flex;
   width: 20%;
   float: left;
   cursor: pointer;
+  justify-content: start;
+  align-items: center;
 }
 
+input[type="image"] {
+  max-width: 128px;
+  height: auto;
+ 
+}
 .thumb-bar img:focus {
   outline: 2px solid red ;
 }

@@ -25,10 +25,11 @@ the same here and thought to try it myself. I used imageSrc to maintain a concis
 of setting the src and the alt contents into each image in the array without the need to make
 multiple lines for every image*/ 
 imagesStored.forEach((imageSrc, index) => {
-    const newImage = document.createElement('img');
+    const newImage = document.createElement('input');
     newImage.setAttribute('src', imageSrc);
     newImage.setAttribute('alt', imagesDescript[index]);
     newImage.setAttribute('tabindex', '0');
+    newImage.setAttribute('type', 'image')
     thumbBar.appendChild(newImage);
 
     newImage.addEventListener('click', () => {
@@ -48,11 +49,13 @@ function lightdark() {
     const currentClass = btn.getAttribute('class')
     if (currentClass === 'dark') { //if dark, make light
         btn.setAttribute('class', 'light');
+        btn.setAttribute('aria-label', 'Picture made lighter')
         btn.textContent = 'Darken';
         overlay.style.backgroundColor = 'rgb(0 0 0 / 0%)';
     } if (currentClass === 'light') { //if light make dark
         btn.setAttribute('class', 'dark');
         btn.textContent = 'Lighten';
+        btn.setAttribute('aria-label', 'Picture made darker')
         overlay.style.backgroundColor = 'rgb(0 0 0 / 50%)';
     }
 

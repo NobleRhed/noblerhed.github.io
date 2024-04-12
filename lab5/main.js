@@ -1,7 +1,9 @@
 // functionality for showing/hiding the comments section
 
-const showHideBtn = document.querySelector('.show-hide');
+const showHideBtn = document.querySelector('.show-hide button');
 const commentWrapper = document.querySelector('.comment-wrapper');
+const transcriptBtn = document.querySelector(".transcript-control button");
+const transcript = document.querySelector(".audiotext")
 
 commentWrapper.style.display = 'none';
 
@@ -16,6 +18,21 @@ showHideBtn.onclick = function() {
   }
 };
 
+//button and js code found in another example provided at mdn, 
+//found at https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/ in the source HTML/CSS/JS
+//as suggested at this accessibility>Multimedia teaching page: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia
+
+
+transcriptBtn.onclick = function() {
+  let transOnoff = transcriptBtn.textContent;
+  if (transOnoff === 'Show Transcript') {
+    transcript.style.height = '150px';
+    transcriptBtn.textContent = 'Hide Transcript';
+  } else {
+    transcript.style.height = '0';
+    transcriptBtn.textContent = 'Show Transcript';
+  }
+}
 // functionality for adding a new comment via the comments form
 
 const form = document.querySelector('.comment-form');
